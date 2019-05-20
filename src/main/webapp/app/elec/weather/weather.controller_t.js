@@ -8,7 +8,7 @@ angular
 WeatherController_t.$inject = ['$scope', '$http', '$stateParams'];
 
 function WeatherController_t($scope, $http, $stateParams) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
     $scope.searchWeather = $stateParams.searchWeather;
     $scope.searchType = $stateParams.searchType;
 

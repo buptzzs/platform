@@ -8,7 +8,7 @@ angular
 LineController.$inject = ['$scope', '$http', '$state'];
 
 function LineController($scope,$http, $state) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
     $scope.$watch('searchLine',function(){
         $scope.getLines($scope.searchLine);
     });

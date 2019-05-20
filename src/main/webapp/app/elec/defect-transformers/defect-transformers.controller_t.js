@@ -18,7 +18,7 @@ function DefectTransformerController_t($scope, $http, $stateParams, replaceCodeF
 
 
     console.log($scope.searchDefectTransDateStart);
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.searchDefectTransformer = $stateParams.searchDefectTransformer;
     $scope.searchType = $stateParams.searchType;

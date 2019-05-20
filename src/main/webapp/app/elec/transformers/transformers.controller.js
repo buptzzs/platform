@@ -7,7 +7,7 @@ angular
 
 TransformerController.$inject = ['$scope', '$http', '$state', 'runLocal'];
 function TransformerController($scope,$http,$stateParams, runLocal) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.seeTransformerDefect = function ($event) {
         $state.go('defect-transformers',{searchDefectTransformer: $event.target.innerHTML})

@@ -10,7 +10,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-# db = MySQLdb.connect("10.109.247.63","root","hadoop","weibo_new")
+# db = MySQLdb.connect("10.109.246.63","root","hadoop","weibo_new")
 # cursor = db.cursor()
 # db.set_character_set('utf8')
 # cursor.execute('SET NAMES utf8;')

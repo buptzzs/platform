@@ -8,7 +8,7 @@ angular
 DefectLineController.$inject = ['$scope', '$http'];
 
 function DefectLineController($scope, $http, $stateParams) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.getDefectLines = function(){
         var url = host + 'defect-lines?callback=JSON_CALLBACK'

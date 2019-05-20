@@ -7,7 +7,7 @@ angular
 
 MapController.$inject = ['$scope', '$http', '$state'];
 function MapController($scope, $http, $state) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.lineInfo ={};
     var t;

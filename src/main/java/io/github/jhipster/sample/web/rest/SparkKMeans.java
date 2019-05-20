@@ -88,7 +88,7 @@ public class SparkKMeans implements Serializable {
     @ResponseBody
     public String kmeans1(@RequestParam(value = "FileName")String fileName,
                          @RequestParam(value = "numClusters")int numClusters) {
-        SparkConf conf = new SparkConf().setAppName("JavaKMeansExample").setMaster("spark://10.109.247.120:7077");
+        SparkConf conf = new SparkConf().setAppName("JavaKMeansExample").setMaster("spark://10.109.246.120:7077");
         JavaSparkContext jsc = new JavaSparkContext(conf);
 
         // Load and parse data

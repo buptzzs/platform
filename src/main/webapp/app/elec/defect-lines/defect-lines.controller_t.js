@@ -17,7 +17,7 @@ function DefectLineController_t($scope, $http, $stateParams, DateUtils, $filter)
     $scope.searchDefectLineDateEnd = $filter('date')($scope.searchDefectLineDateEnd, 'yyyy-MM-dd HH:MM');
 
     console.log($scope.searchDefectLineDateStart);
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.searchDefectLine = $stateParams.searchDefectLine;
     $scope.searchType = $stateParams.searchType;

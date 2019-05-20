@@ -8,7 +8,7 @@ angular
 LineStatusController_t.$inject = ['$scope', '$http'];
 
 function LineStatusController_t($scope, $http) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.LineStatusPaginationConf = {
         currentPage: 1,

@@ -8,7 +8,7 @@ angular
 WeatherController.$inject = ['$scope', '$http'];
 
 function WeatherController($scope, $http) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.getWeather = function(){
         $http.jsonp(host + 'weathers?callback=JSON_CALLBACK')

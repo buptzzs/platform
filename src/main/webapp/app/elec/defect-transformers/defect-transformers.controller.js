@@ -8,7 +8,7 @@ angular
 DefectTransformerController.$inject = ['$scope', '$http', '$stateParams'];
 
 function DefectTransformerController($scope, $http, $stateParams) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.getDefectTransformers = function(){
         var url = host + 'defect-transformers?callback=JSON_CALLBACK';

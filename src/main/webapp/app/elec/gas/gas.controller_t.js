@@ -8,7 +8,7 @@ angular
 GasController_t.$inject = ['$scope', '$http', '$stateParams'];
 
 function GasController_t($scope, $http, $stateParams) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.searchGas = $stateParams.searchGas;
     $scope.searchType = $stateParams.searchType;

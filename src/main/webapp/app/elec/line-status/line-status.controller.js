@@ -8,7 +8,7 @@ angular
 LineStatusController.$inject = ['$scope', '$http'];
 
 function LineStatusController($scope, $http) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.getLineStatus = function(){
         $http.jsonp(host + 'line-statuses?callback=JSON_CALLBACK')

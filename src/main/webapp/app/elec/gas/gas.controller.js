@@ -8,7 +8,7 @@ angular
 GasController.$inject = ['$scope', '$http'];
 
 function GasController($scope, $http) {
-    var host = 'http://10.109.247.121/electric_backend/public/electric/';
+    var host = 'http://10.109.246.121/electric_backend/public/electric/';
 
     $scope.getGas = function(){
         $http.jsonp(host + 'gas?callback=JSON_CALLBACK')
