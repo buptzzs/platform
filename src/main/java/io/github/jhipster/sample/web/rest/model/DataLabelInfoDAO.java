@@ -1,6 +1,7 @@
 package io.github.jhipster.sample.web.rest.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -44,6 +45,7 @@ import java.util.Set;
 @Repository
 public class DataLabelInfoDAO {
     @Autowired
+    @Qualifier("secondaryJdbcTemplate")
     private JdbcTemplate jdbcTemplate;
 
     @Autowired

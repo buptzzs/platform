@@ -25,10 +25,16 @@ spring:
     jackson:
         serialization.indent_output: true
     datasource:
-        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://10.109.246.63:3306/corpus?characterEncoding=utf-8
-        username: root
-        password: hadoop
+        primary:
+            type: com.zaxxer.hikari.HikariDataSource
+            url: jdbc:mysql://10.109.246.63:3306/electricGrid?characterEncoding=utf-8
+            username: root
+            password: hadoop
+        secondary:
+            type: com.zaxxer.hikari.HikariDataSource
+            url: jdbc:mysql://10.109.246.63:3306/corpus?characterEncoding=utf-8
+            username: root
+            password: hadoop
     h2:
         console:
             enabled: false
