@@ -2,6 +2,7 @@
 
 * 这个项目是基于jhipster往上随便搭建的
 * 这个项目需要用到node（npm），yarn（yo），bower，maven等等构建工具，越帮越乱
+* 本来我是用java10运行的，根本跑不通之后我就换了java8，所以写在前面。
 * 通常的readme不好使我才写的这个
 
 
