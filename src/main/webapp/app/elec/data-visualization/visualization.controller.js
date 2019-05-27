@@ -277,7 +277,7 @@ function VisualizationController($scope, $http, $state) {
             legend: {
                 orient: 'vertical',
                 data: ['黄色的线路色标', '绿色的线路色标', '蓝色的线路色标', '紫色的线路色标', '红色的线路色标', '深红色的线路色标'],
-                left: '75%',
+                left: '55%',
                 top: 'bottom',
                 textStyle: {
                     color: '#2e2e2f'
@@ -287,7 +287,7 @@ function VisualizationController($scope, $http, $state) {
             toolbox: {
                 show: true,
                 orient: 'vertical',
-                left: 'right',
+                right:'15%',
                 top: 'center',
                 feature: {
                     dataView: {readOnly: false},
@@ -1097,6 +1097,7 @@ function VisualizationController($scope, $http, $state) {
                 trigger: 'axis'
             },
             legend: {
+                left:'40%',
                 data: ['起点电站Ia值	', '终点电站Ia值', '起点电站Ib值', '终点电站Ib值', '起点电站Ic值', '终点电站Ic值']
             },
             toolbox: {

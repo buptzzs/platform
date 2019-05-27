@@ -2,18 +2,15 @@
     <!--<topnavigation></topnavigation>-->
     <!--<sidenavigation></sidenavigation>-->
     <div class="row" ng-controller="WeatherController_t" ng-init="getWeather()">
-        <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 main">
+        <div class="col-sm-12 col-md-12 main">
             <h1 class="maintitle">气象</h1>
-            <hr>
+            <hr style="border:1px dashed #999999" width="100%" size=1>
             <a class="btn btn-primary" href="index.html#/weather-chart">
                 <i class="icon-bar-chart"></i> 数据图示</a>
             <a class="btn btn-primary active" href="index.html#/weather-table">
                 <i class="icon-list"></i> 数据详情</a>
-            <br>
-            <br>
-            <br>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 main">
+        <div class="col-sm-12 col-md-12 main">
             <hr/>
             <div class="form-group">
                 <label for="searchWeather" class="control-label">查询：</label>
@@ -25,7 +22,7 @@
                 <button type="button" class="btn btn-primary" style="height:30px" ng-click="search()">查询</button>
             </div>
             <div class="table-responsive">
-                <table class="hovertable">
+                <table class="hovertable table table-bordered">
                     <thead>
                         <tr>
                             <th>变电站/线路</th>

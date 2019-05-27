@@ -65,11 +65,15 @@ function WeatherController($scope, $http) {
                 trigger: 'axis'
             },
             legend: {
+                left:'20%',
                 data:['风向','风速','阵风风向','阵风风速','降水量','相对湿度','温度','气压','能见度','级大风风向','级大风风速']
             },
             toolbox: {
                 feature: {
-                    saveAsImage: {}
+
+                    saveAsImage: {
+                        right:'10%'
+                    }
                 }
             },
             grid: {

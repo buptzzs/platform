@@ -30,6 +30,8 @@
     <link href="content/css/fileUpload.css" rel="stylesheet" type="text/css">
     <link href="content/css/documentation.css" rel="stylesheet" type="text/css">
     <!-- endbuild -->
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </head>
 <body ng-app="jhipsterSampleApplicationApp" ng-strict-di>
     <!--[if lt IE 9]>
@@ -61,14 +63,15 @@
 
     <!-- build:js app/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/lib/d3.js"></script>
     <script src="js/lib/echarts.min.js"></script>
     <script src="js/lib/shandong.js"></script>
     <script src="bower_components/bootstrap-fileinput/js/fileinput.js"></script>
     <script src="bower_components/bootstrap-fileinput/js/locales/zh.js"></script>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
     <script src="bower_components/messageformat/messageformat.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -105,8 +108,9 @@
     <!-- build:js app/app.js  -->
     <!-- inject:js -->
     <script src="app/app.module.js"></script>
-
     <script src="app/utils/date-utils.service.js"></script>
+    <script src="app/template-fill/templateFill.controller.js"></script>
+    <script src="app/template-fill/tableExport.js"></script>
     <script src="app/services/user/user.service.js"></script>
     <script src="app/services/profiles/profile.service.js"></script>
     <script src="app/services/profiles/page-ribbon.directive.js"></script>
@@ -122,35 +126,53 @@
     <script src="app/services/auth/auth.service.js"></script>
     <script src="app/services/auth/activate.service.js"></script>
     <script src="app/services/auth/account.service.js"></script>
-    
+    <script src="app/runAl/runAl.controller.js"></script>
+    <script src="app/runAl/run-millib.service.js"></script>
+    <script src="app/runAl/get-algorithm-param.js"></script>
+    <script src="app/projectManage/projectManage.controller.js"></script>
+    <script src="app/projectManage/get-project-des.js"></script>
+    <script src="app/projectManage/edit-project.service.js"></script>
+    <script src="app/projectManage/delete-project.service.js"></script>
+    <script src="app/projectManage/create-Project.service.js"></script>
     <script src="app/project/pso-local/runLocal.service.js"></script>
     <script src="app/project/pso-local/psoLocal.controller.js"></script>
-    <script src="app/project/datalabel/dataLabel.controller.js"></script>
-    <script src="app/project/datalabel/dataLabel.service.js"></script>
-    <script src="app/project/datalabel/dataLabel.subservice.js"></script>
-    <script src="app/project/datalabel/dataLabel.initservice.js"></script>
-    <script src="app/project/datalabel_admin/admin.controller.js"></script>
-    <script src="app/project/datalabel_admin/label.change.service.js"></script>
-    <script src="app/project/datalabel_admin/label.merge.service.js"></script>
-    <script src="app/project/datalabel_admin/label.del.service.js"></script>
-    <script src="app/project/datalabel_admin/label.create.service.js"></script>
-    <script src="app/project/datalabel_admin/label.rename.service.js"></script>
-    <script src="app/project/datalabel_admin/label.draw.service.js"></script>
-    <script src="app/project/datalabel_admin/label.join.service.js"></script>
-    <script src="app/project/datalabel_train/label.train.service.js"></script>
     <script src="app/project/datalabel_train/train.controller.js"></script>
-    <script src="app/project/datalabel_manage/manage.controller.js"></script>
-    <script src="app/project/datalabel_manage/manage.dbcreate.service.js"></script>
+    <script src="app/project/datalabel_train/label.train.service.js"></script>
     <script src="app/project/datalabel_manage/manage.dblook.service.js"></script>
     <script src="app/project/datalabel_manage/manage.dbdel.service.js"></script>
-    
+    <script src="app/project/datalabel_manage/manage.dbcreate.service.js"></script>
+    <script src="app/project/datalabel_manage/manage.controller.js"></script>
+    <script src="app/project/datalabel_admin/label.rename.service.js"></script>
+    <script src="app/project/datalabel_admin/label.merge.service.js"></script>
+    <script src="app/project/datalabel_admin/label.join.service.js"></script>
+    <script src="app/project/datalabel_admin/label.draw.service.js"></script>
+    <script src="app/project/datalabel_admin/label.del.service.js"></script>
+    <script src="app/project/datalabel_admin/label.create.service.js"></script>
+    <script src="app/project/datalabel_admin/label.change.service.js"></script>
+    <script src="app/project/datalabel_admin/admin.controller.js"></script>
+    <script src="app/project/datalabel/dataLabel.subservice.js"></script>
+    <script src="app/project/datalabel/dataLabel.service.js"></script>
+    <script src="app/project/datalabel/dataLabel.initservice.js"></script>
+    <script src="app/project/datalabel/dataLabel.controller.js"></script>
+    <script src="app/MLLib/predict/LR/Train/train-model.service.js"></script>
+    <script src="app/MLLib/predict/LR/Train/LRTrain.controller.js"></script>
+    <script src="app/MLLib/predict/LR/Train/get-parameter.service.js"></script>
+    <script src="app/MLLib/predict/LR/Train/get-hdfs-file.service.js"></script>
+    <script src="app/MLLib/predict/LR/Test/predict.service.js"></script>
+    <script src="app/MLLib/predict/LR/Test/LRTest.controller.js"></script>
+    <script src="app/MLLib/predict/LR/Test/get-models.service.js"></script>
     <script src="app/layouts/navbar/navbar.controller.js"></script>
     <script src="app/layouts/navbar/active-menu.directive.js"></script>
     <script src="app/layouts/error/error.state.js"></script>
+    <script src="app/homeNew/icon.change.js"></script>
     <script src="app/homeNew/home.state.js"></script>
     <script src="app/homeNew/home.controller.js"></script>
-    <script src="app/homeNew/icon.change.js"></script>
-        
+    <script src="app/home/home.state.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/fileUpload/fileUpload.service.js"></script>
+    <script src="app/etl/textETL.controller.js"></script>
+    <script src="app/etl/etl.service.js"></script>
+    <script src="app/etl/etl.controller.js"></script>
     <script src="app/entities/operation/operation-dialog.controller.js"></script>
     <script src="app/entities/operation/operation-detail.controller.js"></script>
     <script src="app/entities/operation/operation-delete-dialog.controller.js"></script>
@@ -170,13 +192,24 @@
     <script src="app/entities/bank-account/bank-account.state.js"></script>
     <script src="app/entities/bank-account/bank-account.service.js"></script>
     <script src="app/entities/bank-account/bank-account.controller.js"></script>
-    
+    <script src="app/elec/weather/weather.controller_t.js"></script>
+    <script src="app/elec/weather/weather.controller.js"></script>
+    <script src="app/elec/transformers/transformers.controller.js"></script>
+    <script src="app/elec/map/map.controller.js"></script>
+    <script src="app/elec/lines/lines.controller.js"></script>
+    <script src="app/elec/line-status/line-status.controller_t.js"></script>
+    <script src="app/elec/line-status/line-status.controller.js"></script>
+    <script src="app/elec/gas/gas.controller_t.js"></script>
+    <script src="app/elec/gas/gas.controller.js"></script>
+    <script src="app/elec/elec.controller.js"></script>
+    <script src="app/elec/defect-transformers/defect-transformers.controller_t.js"></script>
+    <script src="app/elec/defect-transformers/defect-transformers.controller.js"></script>
+    <script src="app/elec/defect-lines/defect-lines.controller_t.js"></script>
+    <script src="app/elec/defect-lines/defect-lines.controller.js"></script>
+    <script src="app/elec/data-visualization/visualization.controller.js"></script>
     <script src="app/directive/maptitle.directive.js"></script>
     <script src="app/directive/footer.directive.js"></script>
     <script src="app/directive/carousel.directive.js"></script>
-    
-
-    
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
     <script src="app/components/util/sort-by.directive.js"></script>
@@ -216,6 +249,14 @@
     <script src="app/blocks/config/alert.config.js"></script>
     <script src="app/app.state.js"></script>
     <script src="app/app.constants.js"></script>
+    <script src="app/allFileData/get-server-project.service.js"></script>
+    <script src="app/allFileData/get-server-data.service.js"></script>
+    <script src="app/allFileData/get-all-data.service.js"></script>
+    <script src="app/allFileData/get-algorithm-data.service.js"></script>
+    <script src="app/allFileData/file-upload-hdsf.service.js"></script>
+    <script src="app/allFileData/allFileData.controller.js"></script>
+    <script src="app/allFileAl/upload-params-describe.service.js"></script>
+    <script src="app/allFileAl/allFileAl.controller.js"></script>
     <script src="app/admin/user-management/user-management-dialog.controller.js"></script>
     <script src="app/admin/user-management/user-management-detail.controller.js"></script>
     <script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
@@ -256,70 +297,6 @@
     <script src="app/account/activate/activate.state.js"></script>
     <script src="app/account/activate/activate.controller.js"></script>
     <script src="app/account/account.state.js"></script>
-
-
-    <!-- elec module -->
-     <script src="app/elec/transformers/transformers.controller.js"></script>
-    <script src="app/elec/data-visualization/visualization.controller.js"></script>
-    <script src="app/elec/map/map.controller.js"></script>
-    <script src="app/elec/defect-lines/defect-lines.controller.js"></script>
-    <script src="app/elec/defect-lines/defect-lines.controller_t.js"></script>
-    <script src="app/elec/defect-transformers/defect-transformers.controller.js"></script>
-    <script src="app/elec/defect-transformers/defect-transformers.controller_t.js"></script>
-    <script src="app/elec/gas/gas.controller.js"></script>
-    <script src="app/elec/gas/gas.controller_t.js"></script>
-    <script src="app/elec/line-status/line-status.controller.js"></script>
-    <script src="app/elec/line-status/line-status.controller_t.js"></script>
-    <script src="app/elec/lines/lines.controller.js"></script>
-    <script src="app/elec/weather/weather.controller.js"></script>
-    <script src="app/elec/weather/weather.controller_t.js"></script>
-    <script src="app/elec/transformers/transformers.controller.js"></script>
-    
-    
-    
-
-    <script src="app/project/pso-local/psoLocal.controller.js"></script>
-    <script src="app/project/pso-local/runLocal.service.js"></script>
-    <script src="app/fileUpload/fileUpload.service.js"></script>
-    <script src="app/allFileData/allFileData.controller.js"></script>
-    <script src="app/allFileData/get-all-data.service.js"></script>
-    <script src="app/allFileData/get-algorithm-data.service.js"></script>
-    <script src="app/allFileData/file-upload-hdsf.service.js"></script>
-    <script src="app/MLLib/predict/LR/Train/LRTrain.controller.js"></script>
-    <script src="app/MLLib/predict/LR/Train/get-hdfs-file.service.js"></script>
-    <script src="app/MLLib/predict/LR/Test/LRTest.controller.js"></script>
-    <script src="app/MLLib/predict/LR/Test/predict.service.js"></script>
-    <script src="app/MLLib/predict/LR/Test/get-models.service.js"></script>
-    <script src="app/MLLib/predict/LR/Train/get-parameter.service.js"></script>
-    <script src="app/MLLib/predict/LR/Train/train-model.service.js"></script>
-    <script src="app/allFileAl/allFileAl.controller.js"></script>
-    <script src="app/allFileData/get-server-data.service.js"></script>
-    <script src="app/allFileData/get-server-project.service.js"></script>
-    <script src="app/projectManage/projectManage.controller.js"></script>
-    <script src="app/projectManage/create-Project.service.js"></script>
-    <script src="app/projectManage/edit-project.service.js"></script>
-    <script src="app/projectManage/delete-project.service.js"></script>
-    <script src="app/projectManage/get-project-des.js"></script>
-    <script src="app/runAl/runAl.controller.js"></script>
-    <script src="app/allFileAl/upload-params-describe.service.js"></script>
-    <script src="app/directive/carousel.directive.js"></script>
-    <script src="app/directive/footer.directive.js"></script>
-    <script src="app/runAl/get-algorithm-param.js"></script>
-    <script src="app/runAl/run-millib.service.js"></script>
-    
-    <!-- ETL components -->
-    <script src="app/etl/etl.controller.js"></script>
-    <script src="app/etl/textETL.controller.js"></script>
-    <script src="app/etl/etl.service.js"></script>
-    
-    <!-- TemplateFill components -->
-    <script src="app/template-fill/templateFill.controller.js"></script>
-    <script src="app/template-fill/tableExport.js"></script> 
-    <!--<script src="app/directive/maptitle.directive.js"></script>-->
-
-
-    <script src="js/lib/bootstrap-paginator.js"></script>
-
     <!-- endinject -->
     <!-- endbuild -->
 

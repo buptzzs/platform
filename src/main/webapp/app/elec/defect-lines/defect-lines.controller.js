@@ -97,7 +97,7 @@ function DefectLineController($scope, $http, $stateParams) {
                     name:'面积模式',
                     type:'pie',
                     radius : [30, 110],
-                    center : ['55%', '50%'],
+                    center : ['60%', '50%'],
                     roseType : 'area',
                     data: showPlaces
                 }
@@ -137,7 +137,7 @@ function DefectLineController($scope, $http, $stateParams) {
                     name:'面积模式',
                     type:'pie',
                     radius : [30, 110],
-                    center : ['55%', '50%'],
+                    center : ['50%', '50%'],
                     roseType : 'area',
                     data: showLevels
                 }
