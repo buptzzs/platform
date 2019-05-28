@@ -1007,7 +1007,7 @@ function VisualizationController($scope, $http, $state) {
                 {
                     name: '面积模式',
                     type: 'pie',
-                    radius: [30, 110],
+                    radius: [30, 90],
                     center: ['55%', '50%'],
                     roseType: 'area',
                     data: showPlaces
@@ -1047,7 +1047,7 @@ function VisualizationController($scope, $http, $state) {
                 {
                     name: '面积模式',
                     type: 'pie',
-                    radius: [30, 110],
+                    radius: [30, 70],
                     center: ['55%', '50%'],
                     roseType: 'area',
                     data: showLevels
@@ -1097,7 +1097,8 @@ function VisualizationController($scope, $http, $state) {
                 trigger: 'axis'
             },
             legend: {
-                left:'40%',
+                left:'130',
+                right:'20',
                 data: ['起点电站Ia值	', '终点电站Ia值', '起点电站Ib值', '终点电站Ib值', '起点电站Ic值', '终点电站Ic值']
             },
             toolbox: {
