@@ -1,19 +1,19 @@
 {
-    "home": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
-        "logged": {
-            "message": "You are logged in as user \"{{username}}\"."
-        },
-        "question": "If you have any question on JHipster:",
-        "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "chat": "JHipster public chat room",
-            "follow": "follow @java_hipster on Twitter"
-        },
-        "like": "If you like JHipster, don't forget to give us a star on",
-        "github": "GitHub"
-    }
+  "home": {
+    "title": "电网大数据分析平台",
+    "subtitle": "这里是首页",
+    "logged": {
+      "message": "您目前是以 \"{{username}}\" 账号登录."
+    },
+    "question": "如果您有任何有关电网平台的问题, 可以查阅下列资源:",
+    "link": {
+      "homepage": "JHipster 首頁",
+      "stackoverflow": "Stack Overflow 上关于 JHipster 的讨论",
+      "bugtracker": "JHipster 的缺陷追踪",
+      "chat": "JHipster public chat room",
+      "follow": "在 Twitter 上联络 @java_hipster"
+    },
+    "like": "如果您喜欢请记得给我们加星在",
+    "github": "GitHub"
+  }
 }

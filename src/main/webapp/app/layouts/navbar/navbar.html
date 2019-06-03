@@ -17,7 +17,7 @@
                 <li ui-sref-active="active">
                     <a ui-sref="homeNew" ng-click="vm.collapseNavbar()">
                         <span class="glyphicon glyphicon-home"></span>
-                        <span class="hidden-sm">Home</span>
+                        <span class="hidden-sm">主页</span>
                     </a>
                 </li>
                 <li ui-sref-active="active" uib-dropdown class="dropdown pointer">
@@ -32,20 +32,20 @@
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="elec" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-fire"></span>&nbsp;
-                                <span >电网</span>
+                                <span>电网</span>
                             </a>
                         </li>
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ng-href="{{report}}" target="_blank" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-signal"></span>&nbsp;
-                                <span >设备文本分析</span>
+                                <span>设备文本分析</span>
                             </a>
                         </li>
                     </ul>
 
                 </li>
 
-                <li ui-sref-active="active" uib-dropdown class="dropdown pointer" >
+                <li ui-sref-active="active" uib-dropdown class="dropdown pointer">
                     <a class="dropdown-toggle" uib-dropdown-toggle href="">
                         <span>
                             <span class="glyphicon glyphicon-pushpin"></span>
@@ -54,31 +54,31 @@
                         </span>
                     </a>
                     <ul class="dropdown-menu" uib-dropdown-menu>
-                        <li  ui-sref-active="active" ng-switch-when="true">
+                        <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="psoLocal" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-                                <span >PSO本地算法</span>
+                                <span>PSO本地算法</span>
                             </a>
                         </li>
-                        <li  ui-sref-active="active" ng-switch-when="true">
+                        <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="dataLabel" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-pencil"></span>&nbsp;
-                                <span >语料标注</span>
+                                <span>语料标注</span>
                             </a>
                         </li>
-                        <li  ui-sref-active="active" ng-switch-when="true">
+                        <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="etl" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
                                 <span>数据抽取转换</span>
                             </a>
                         </li>
-                        <li  ui-sref-active="active" ng-switch-when="true">
+                        <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="projectManage" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
                                 <span>算法项目管理</span>
                             </a>
                         </li>
-                         <li  ui-sref-active="active" ng-switch-when="true">
+                        <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="templatefill" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
                                 <span>文本模板提取</span>
@@ -88,13 +88,13 @@
                 </li>
 
                 <!--<li ui-sref-active="active" uib-dropdown class="dropdown pointer" >-->
-                    <!--<a ui-sref="LRTrain" ng-click="vm.collapseNavbar()">-->
-                        <!--<span>-->
-                            <!--<span class="glyphicon glyphicon-level-up"></span>-->
-                            <!--<span>MLLib</span>-->
-                             <!--&lt;!&ndash;<b class="caret"></b>&ndash;&gt;-->
-                        <!--</span>-->
-                    <!--</a>-->
+                <!--<a ui-sref="LRTrain" ng-click="vm.collapseNavbar()">-->
+                <!--<span>-->
+                <!--<span class="glyphicon glyphicon-level-up"></span>-->
+                <!--<span>MLLib</span>-->
+                <!--&lt;!&ndash;<b class="caret"></b>&ndash;&gt;-->
+                <!--</span>-->
+                <!--</a>-->
                 <!--</li>-->
                 <!--
                 <li ui-sref-active="active" uib-dropdown class="dropdown pointer" >
@@ -111,7 +111,7 @@
                         <span>
                             <span class="glyphicon glyphicon-user"></span>
                             <span class="hidden-sm">
-                                Account
+                                用户
                             </span>
                             <b class="caret"></b>
                         </span>
@@ -120,13 +120,13 @@
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="settings" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
-                                <span>Settings</span>
+                                <span>用户设置</span>
                             </a>
                         </li>
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="password" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-lock"></span>&nbsp;
-                                <span >Password</span>
+                                <span>修改密码</span>
                             </a>
                         </li>
                         <li ui-sref-active="active" ng-switch-when="true">
@@ -138,28 +138,29 @@
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a href="" ng-click="vm.logout()" id="logout">
                                 <span class="glyphicon glyphicon-log-out"></span>&nbsp;
-                                <span >Sign out</span>
+                                <span>注销</span>
                             </a>
                         </li>
                         <li ui-sref-active="active" ng-switch-when="false">
                             <a href="" ng-click="vm.login()" id="login">
                                 <span class="glyphicon glyphicon-log-in"></span>&nbsp;
-                                <span>Sign in</span>
+                                <span>登录</span>
                             </a>
                         </li>
                         <li ui-sref-active="active" ng-switch-when="false">
                             <a ui-sref="register" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-                                <span >Register</span>
+                                <span>注册</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li ng-class="{active: vm.$state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">
+                <li ng-class="{active: vm.$state.includes('admin')}" ng-switch-when="true" has-authority="ROLE_ADMIN"
+                    uib-dropdown class="dropdown pointer">
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="admin-menu">
                         <span>
                             <span class="glyphicon glyphicon-tower"></span>
-                            <span class="hidden-sm">Administration</span>
+                            <span class="hidden-sm">管理员</span>
                             <b class="caret"></b>
                         </span>
                     </a>
@@ -167,37 +168,37 @@
                         <li ui-sref-active="active">
                             <a ui-sref="user-management" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-user"></span>&nbsp;
-                                <span >User management</span>
+                                <span>用户管理</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-metrics" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-dashboard"></span>&nbsp;
-                                <span >Metrics</span>
+                                <span>资源监控</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-health" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-heart"></span>&nbsp;
-                                <span>Health</span>
+                                <span>服务状态</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-configuration" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
-                                <span>Configuration</span>
+                                <span>配置</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="audits" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-bell"></span>&nbsp;
-                                <span>Audits</span>
+                                <span>审核</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="logs" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-tasks"></span>&nbsp;
-                                <span>Logs</span>
+                                <span>日志</span>
                             </a>
                         </li>
                         <li ng-show="vm.swaggerEnabled" ui-sref-active="active">
@@ -207,15 +208,16 @@
                             </a>
                         </li>
                         <!-- jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here -->
-                        <li ng-hide="vm.inProduction">
-                            <a href='/h2-console' target="_tab" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-hdd"></span>&nbsp;
-                                <span>Database</span>
-                            </a>
-                        </li>
+                        <!--<li ng-hide="vm.inProduction">-->
+                            <!--<a href='/h2-console' target="_tab" ng-click="vm.collapseNavbar()">-->
+                                <!--<span class="glyphicon glyphicon-hdd"></span>&nbsp;-->
+                                <!--<span>数据库</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
                     </ul>
                 </li>
-                <li ui-sref-active="active" uib-dropdown class="dropdown pointer" ng-controller="JhiLanguageController as languageVm">
+                <li ui-sref-active="active" uib-dropdown class="dropdown pointer"
+                    ng-controller="JhiLanguageController as languageVm">
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" ng-if="languageVm.languages.length > 1">
                         <span>
                             <span class="glyphicon glyphicon-flag"></span>
@@ -225,7 +227,8 @@
                     </a>
                     <ul class="dropdown-menu" uib-dropdown-menu ng-if="languageVm.languages.length > 1">
                         <li active-menu="{{language}}" ng-repeat="language in languageVm.languages">
-                            <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">{{language | findLanguageFromKey}}</a>
+                            <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">{{language |
+                                findLanguageFromKey}}</a>
                         </li>
                     </ul>
                 </li>

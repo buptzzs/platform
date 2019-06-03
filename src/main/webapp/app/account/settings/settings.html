@@ -12,7 +12,7 @@
             <form name="form" role="form" novalidate ng-submit="vm.save()" show-validation>
 
                 <div class="form-group">
-                    <label class="control-label" for="firstName" data-translate="settings.form.firstname">First Name</label>
+                    <label class="control-label" for="firstName" data-translate="settings.form.firstname">名</label>
                     <input type="text" class="form-control" id="firstName" name="firstName" placeholder="{{'settings.form.firstname.placeholder' | translate}}"
                            ng-model="vm.settingsAccount.firstName" ng-minlength=1 ng-maxlength=50 required maxlength="50">
                     <div ng-show="form.firstName.$dirty && form.firstName.$invalid">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="email" data-translate="global.form.email">Email</label>
+                    <label class="control-label" for="email" data-translate="global.form.email.label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="{{'global.form.email.placeholder' | translate}}"
                            ng-model="vm.settingsAccount.email" ng-minlength=5 ng-maxlength=100 required maxlength="100">
                     <div ng-show="form.email.$dirty && form.email.$invalid">
@@ -72,7 +72,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display: none">
                     <label for="langKey" data-translate="settings.form.language">Language</label>
                     <select id="langKey" name="langKey" class="form-control" ng-model="vm.settingsAccount.langKey" ng-controller="JhiLanguageController as languageVm" ng-options="code as (code | findLanguageFromKey) for code in languageVm.languages"></select>
                 </div>
