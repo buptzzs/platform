@@ -5,9 +5,9 @@
         .module('jhipsterSampleApplicationApp')
         .controller('NavbarController', NavbarController);
 
-    NavbarController.$inject = ['$state', 'Auth', 'Principal', 'ProfileService', 'LoginService'];
+    NavbarController.$inject = ['$state', 'Auth', 'Principal', 'ProfileService', 'LoginService', '$scope','$location'];
 
-    function NavbarController ($state, Auth, Principal, ProfileService, LoginService) {
+    function NavbarController ($state, Auth, Principal, ProfileService, LoginService, $scope, $location) {
         var vm = this;
 
         vm.isNavbarCollapsed = true;
@@ -23,6 +23,7 @@
         vm.toggleNavbar = toggleNavbar;
         vm.collapseNavbar = collapseNavbar;
         vm.$state = $state;
+        $scope.report = "http://"+$location.host()+":8085/report/main";
 
         function login() {
             collapseNavbar();

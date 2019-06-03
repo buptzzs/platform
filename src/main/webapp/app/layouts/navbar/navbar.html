@@ -35,10 +35,16 @@
                                 <span >电网</span>
                             </a>
                         </li>
+                        <li ui-sref-active="active" ng-switch-when="true">
+                            <a ng-href="{{report}}" target="_blank" ng-click="vm.collapseNavbar();">
+                                <span class="glyphicon glyphicon-signal"></span>&nbsp;
+                                <span >设备文本分析</span>
+                            </a>
+                        </li>
                     </ul>
-                    
+
                 </li>
-                
+
                 <li ui-sref-active="active" uib-dropdown class="dropdown pointer" >
                     <a class="dropdown-toggle" uib-dropdown-toggle href="">
                         <span>
@@ -65,7 +71,7 @@
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
                                 <span>数据抽取转换</span>
                             </a>
-                        </li>                 
+                        </li>
                         <li  ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="projectManage" ng-click="vm.collapseNavbar();">
                                 <span class="glyphicon glyphicon-wrench"></span>&nbsp;
@@ -90,7 +96,7 @@
                         <!--</span>-->
                     <!--</a>-->
                 <!--</li>-->
-                <!-- 
+                <!--
                 <li ui-sref-active="active" uib-dropdown class="dropdown pointer" >
                     <a ui-sref="RunAl" ng-click="vm.collapseNavbar()">
                         <span>

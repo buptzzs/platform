@@ -5,9 +5,9 @@
         .module('jhipsterSampleApplicationApp')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
+    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state','$location'];
 
-    function HomeController ($scope, Principal, LoginService, $state) {
+    function HomeController ($scope, Principal, LoginService, $state,$location) {
         var vm = this;
 
         vm.account = null;
@@ -17,7 +17,7 @@
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
-
+        $scope.report = "http://"+$location.host()+":8085/report/main";
         getAccount();
 
         function getAccount() {
@@ -28,6 +28,10 @@
         }
         function register () {
             $state.go('register');
+        }
+
+        function jumpReport () {
+
         }
     }
 })();
