@@ -5,11 +5,14 @@
         <div class="col-sm-12 col-md-12 main">
             <h1 class="maintitle">线路</h1>
             <hr style="border:1px dashed #999999" width="100%" size=1>
-            <div class="form-group">
-                <label for="searchLine" class="control-label">设备ID：</label>
-                <input type="text" class="" id="searchLine" ng-model="searchLine" placeholder="输入要查询设备ID">
-                <button type="button" class="btn btn-primary" style="height:30px">查询</button>
-            </div>
+            <form class="form-inline" style="margin-bottom: 20px">
+                <div class="form-group">
+                    <label for="searchTransformer" class="control-label">设备ID：</label>
+                    <input type="text" class="form-control" id="searchTransformer" ng-model="searchTransformer"
+                           placeholder="输入要查询的设备ID">
+                    <button type="button" class="btn btn-primary">查询</button>
+                </div>
+            </form>
             <div class="table-responsive">
                 <table class="hovertable table table-bordered">
                     <thead>
